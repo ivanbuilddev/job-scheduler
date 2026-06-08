@@ -128,7 +128,7 @@ public class JobWorkerManager : IHostedService
         try
         {
             var executor = router.Resolve(job.Type);
-            await executor.RunAsync(job.Payload, jobCts.Token);
+            await executor.RunAsync(job.Id.ToString(), job.Payload, jobCts.Token);
 
             job.Status = "Completed";
             job.CompletedAt = DateTime.UtcNow;

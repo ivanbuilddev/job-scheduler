@@ -1,4 +1,4 @@
 public interface IJobExecutor
 {
-    public Task RunAsync(string payload, CancellationToken ct);
+    public Task RunAsync(string jobId, string payload, CancellationToken ct);
 }

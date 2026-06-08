@@ -1,4 +1,4 @@
 public class HttpPollerParams
 {
-    public string LogFileName {get; set;} = string.Empty;
+    public string FileToSave {get; set;} = string.Empty;
 }
